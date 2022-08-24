@@ -1,5 +1,5 @@
 import { createMainContent } from './main.js';
-
+import { i}
 const initializePage = () => {
     // Create container
     const container = document.createElement("section");
@@ -14,4 +14,13 @@ const initializePage = () => {
 window.onload = () => {
     initializePage();
     createMainContent();
+
+    let addButton = document.createElement('button')
+    document.body.appendChild(addButton)
+    addButton.innerText = 'add'
+    addButton.addEventListener('click', (e) => {
+        fetchImage()
+    })
+
+
 };
