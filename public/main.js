@@ -34,7 +34,7 @@ const fetchImage = async () => {
   }
 };
 let count = document.createElement("div");
-
+let commentBox = document.createElement("textarea");
 const changePicture = () => {
   let addButton = document.createElement("button");
   document.body.appendChild(addButton);
@@ -42,10 +42,9 @@ const changePicture = () => {
   addButton.addEventListener("click", (e) => {
     fetchImage();
     count.innerText = 0;
-    commentBox.innerText = "Comment Here";
+    commentBox.value = 'Comment Here'
   });
 };
-
 
 const vote = () => {
   let clicks = 0;
@@ -63,7 +62,6 @@ const vote = () => {
     console.log("clicks", e.target);
     console.log("clicks", clicks);
     count.innerText = clicks;
-    console.log("count", countEl);
   });
 
   const downButton = document.createElement("button");
@@ -76,9 +74,8 @@ const vote = () => {
   });
 };
 
-
 const createComment = () => {
-  const commentBox = document.createElement("textarea");
-  commentBox.innerText = "comment here";
+
+  commentBox.value = "Comment Here";
   document.body.appendChild(commentBox);
 };
