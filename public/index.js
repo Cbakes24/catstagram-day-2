@@ -1,5 +1,5 @@
 import { createMainContent } from "./main.js";
-import { fetchImage } from "./main.js";
+
 const initializePage = () => {
   // Create container
   const container = document.createElement("section");
